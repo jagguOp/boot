@@ -1,0 +1,46 @@
+
+
+clear all;
+close all;
+%Study of Satellite Uplink Design
+f=input('Enter the frequency='); 
+R=input('Enter the radius of antenna=');
+n=input('Enter the efficiency=');
+r=input('Enter distance between satellite and earth station=');
+NF=input('Enter noise figure=');
+T=input('Enter the ambient temperature=');
+BW=input('Enter bandwidth=');
+Pt=input('Enter power output of earth station=');
+Gt=input('Enter gain of earth station=’);
+AA=input('Enter the Atmospheric absorbtion loss indB—’); 
+AFL=input('Enter the antenna feeder lodd in dB=’);
+AML=input('Enter antenna misalignment loss in dB=');
+c=3*(10^8);
+k=1 38*10^-23;
+
+Gr=(4*pi*n*pi*(R^2))/(c/f)^2;
+
+GrdB=10*log10(Gr);
+F=10^(N F*0.1);
+To=T+273;
+G_T=GrdB-TsdB
+x=(4*pi*r/(c/f))^2;
+FSL= 10*log10(x);
+C_N=Pt+Gt+G_T-FSL-10*log10(k)-10*log10(BW)
+C_N1=Pt+Gt+G_T-(FSL+AA+AFL+AML)-10*log10(k)-10*log10(BW)
+OUTPUT
+Enter the frequency= 12*10^9
+Enter the radius of antenna=20
+Enter the efficiency=0.6
+Enter distance beiween satellite and earth sta1ion=30000000
+Enter noise figure=7
+Enter the ambient temperature= 17
+Enter bandwidth=30*10^6
+Enter power output of earth slation=0
+Enter gain of earth slation=80
+Enter the Atmospheric absorption loss indB= 1
+Enter the antenna feeder lodd in dB=1.5
+Enter antenna misalignment loss in dB=1
+G_T=41.149
+C_N = 71.412
+C_N1= 67.912

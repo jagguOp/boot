@@ -1,0 +1,36 @@
+
+
+clc;
+clear all;
+satflux=input('enter the value of satflux=');
+BOi=input('Enter the value of BOi=');
+G_Tsat=input('Enter value of G_Tsat=');
+c=3*10^8;
+fu=6*10^9;
+lambda=c/fu;
+A=10*log10((lambda^2)/(4*pi));
+k=10*log10(1.38*10^-23);
+RFL=0;
+C_Nouplink=satflux+A+G_Tsat-BOi-k-RFL
+EIRP=input('Enter the value of EIRP=');
+BOo=input('Enter the value of BOo=');
+FSL=input('Enter the value of FSL=');
+G_TES=input('Enter the value of G_TES=');
+C_Nodownlink=EIRP-BOo+G_TES-FSL-k
+CNU=10^(0.1*C_Nouplink);
+CND=10^(0.1*C_Nodownlink);
+C_NCombined=1/(CNU^(-1)+CND^(-1))
+C_NdB=10*log10(C_NCombined)
+
+OUTPUT
+enter the value of satflux=-67.5
+Enter the value of BOi=11
+Enter value of G_Tsat=-11.6
+C_Nouplink = 101.49
+Enter the value of EIRP=26.6
+Enter the value of BOo=6
+Enter the value of FSL=196.7
+Enter the value of G_TES=40.7
+C_Nodownlink = 93.201
+C_NCombined = 1819905865.83792
+C_NdB = 92.600

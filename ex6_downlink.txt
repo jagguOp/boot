@@ -1,0 +1,22 @@
+
+clc;
+clear all;
+close all;
+
+%Study of Satellite downlink design
+
+EIRPs=input('Enter saturated EIRP value in dBW=');
+BOo=input('Enter the output backoff in dB=');
+FSL=input('Enter free space loss indB=');
+LOSSES=input('Enter the other downlink losses in dB=');
+G_T=input('Enter the earth station G/T in in dB/K=');
+k=1.38*10^-23;
+C_No=EIRPs-BOo+G_T-(FSL+LOSSES)-10*log10(k)
+
+OUTPUT
+Enter saturated EIRP value in dBW=25
+Enter the output backoff in dB=6
+Enter free space loss indB=196
+Enter the other downlink losses in dB=1.5
+Enter the earth station G/T in in dB/K=41
+C_No = 91.101

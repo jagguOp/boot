@@ -1,0 +1,21 @@
+
+clc;
+A=input('Enter apogee distance =');
+P=input('Enter perigee distance =');
+R=6400;
+a=(A+P)/2
+b=sqrt(A+P)
+e=(A-P)/(A+P)
+d=a*e
+Ha=A-R
+Hp=P-R
+
+Output :-
+Enter apogee distance =42000
+Enter perigee distance =8000
+a = 25000
+b = 223.61
+e = 0.68000
+d = 17000
+Ha = 35600
+Hp = 1600
