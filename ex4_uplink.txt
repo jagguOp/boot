@@ -18,6 +18,9 @@ Gr=(4*pi*n*pi*(R^2))/(c/f)^2;
 GrdB=10*log10(Gr);
 F=10^(NF*0.1);
 To=T+273;
+Ts=To*(F-1);
+
+TsdB=10*log10(Ts)
 G_T=GrdB-TsdB
 x=(4*pi*r/(c/f))^2;
 FSL= 10*log10(x);
