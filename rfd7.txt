@@ -1,0 +1,24 @@
+clc;
+//Given: 
+G1=10;G2=25;G3=30;
+F1=2;F2=4;F3=5;
+// Overall power gain is
+G=G1*G2*G3;
+disp('dB',10*log10(G),'The power gain is');
+// The noise figure is given as 
+F=F1+((F2-1)/G1) + ((F3-1)/(G1*G2));
+disp('dB',10*log10(F),'The noise figure is');
+// Noise temp can be found as 
+Teq=290*(F-1);
+disp('K',Teq,'The noise temperature is');
+
+OUTPUT:
+The power gain is
+ 38.750613
+dB
+The noise figure is
+ 3.6473856
+dB
+The noise temperature is
+ 381.64
+K
